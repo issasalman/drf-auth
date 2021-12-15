@@ -9,11 +9,11 @@ from .permissions import IsAuthenticatedOrReadOnly
 class Ps5_gamesList(generics.ListCreateAPIView):
     queryset = Ps5_games.objects.all()
     serializer_class = Ps5_gamesSerialzer
-    permission_classes = (IsAuthenticatedOrReadOnly,)
+    permission_class= (IsAuthenticatedOrReadOnly,)
 
 # RUD view
 class Ps5_gamesDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Ps5_games.objects.all()
     serializer_class = Ps5_gamesSerialzer
-    permission_classes = (IsAuthenticatedOrReadOnly,)
+    permission_class = (IsAuthenticatedOrReadOnly,)
 
